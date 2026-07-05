@@ -24,7 +24,7 @@
         <a href="#orders">Orders</a>
       </nav>
       <div class="header-actions">
-        <button class="login-pill" type="button" data-open-login>Login</button>
+        <button class="login-pill" type="button" data-open-login id="loginStatusButton">Login</button>
         <button class="cart-pill" type="button" data-open-cart>
           Cart <span id="cartCount">0</span>
         </button>
@@ -260,6 +260,7 @@
         <button class="button primary full" type="button" id="customerLogin">Login / check orders</button>
         <div class="google-button-slot" id="googleButton"></div>
         <button class="button ghost full" type="button" id="googleLogin">Continue with Google</button>
+        <button class="button ghost full" type="button" id="customerLogout" hidden>Logout</button>
         <p class="mini warning">Never enter a Roblox password or cookie on fan shops. This login only uses email or username.</p>
         <p class="mini" id="customerLoginMessage">Use the same email or Roblox username entered at checkout.</p>
       </div>

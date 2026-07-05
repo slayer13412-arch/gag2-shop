@@ -185,6 +185,8 @@ const chatLog = document.querySelector("#chatLog");
 const chatInput = document.querySelector("#chatInput");
 const googleLoginButton = document.querySelector("#googleLogin");
 const googleButtonSlot = document.querySelector("#googleButton");
+const loginStatusButton = document.querySelector("#loginStatusButton");
+const customerLogout = document.querySelector("#customerLogout");
 
 function money(value) {
   return `$${value.toFixed(0)}`;
@@ -420,11 +422,40 @@ function readCustomerSession() {
 
 function writeCustomerSession(session) {
   localStorage.setItem(customerSessionStorageKey, JSON.stringify(session));
+  updateLoginState();
 }
 
 function customerIsLoggedIn() {
   const session = readCustomerSession();
   return Boolean(session?.email || session?.robloxUsername);
+}
+
+function sessionLabel(session = readCustomerSession()) {
+  if (!session) return "Login";
+  return session.email || session.robloxUsername || "Login";
+}
+
+function updateLoginState() {
+  const session = readCustomerSession();
+  const loggedIn = Boolean(session?.email || session?.robloxUsername);
+  loginStatusButton.textContent = loggedIn ? sessionLabel(session) : "Login";
+  customerLogout.hidden = !loggedIn;
+  if (loggedIn) {
+    customerEmail.value = session.email || "";
+    customerRobloxUsername.value = session.robloxUsername || "";
+    if (session.email) orderEmail.value = session.email;
+    if (session.robloxUsername) document.querySelector("#username").value = session.robloxUsername;
+  }
+}
+
+function logoutCustomer() {
+  localStorage.removeItem(customerSessionStorageKey);
+  localStorage.removeItem(pendingOrderStorageKey);
+  customerEmail.value = "";
+  customerRobloxUsername.value = "";
+  customerStatus.innerHTML = "";
+  customerLoginMessage.textContent = "Logged out.";
+  updateLoginState();
 }
 
 function requireCustomerLogin(message = "Login before shopping.") {
@@ -1092,6 +1123,8 @@ document.querySelector("#googleLogin").addEventListener("click", () => {
   }
 });
 
+customerLogout.addEventListener("click", logoutCustomer);
+
 document.querySelector("#refreshLogins").addEventListener("click", renderLogins);
 
 document.querySelector("#clearLogins").addEventListener("click", async () => {
@@ -1133,6 +1166,7 @@ renderProducts();
 renderBundlePrices();
 renderCart();
 updatePaymentBox();
+updateLoginState();
 loadPrices();
 renderChat();
 initializeGoogleLogin();
