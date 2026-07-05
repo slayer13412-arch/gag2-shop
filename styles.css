@@ -395,8 +395,16 @@ main {
   background: #5e915b;
 }
 
+.rarity.uncommon {
+  background: #719b33;
+}
+
 .rarity.rare {
   background: #2f86a6;
+}
+
+.rarity.epic {
+  background: #7754b8;
 }
 
 .rarity.legendary {

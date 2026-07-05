@@ -1,4 +1,4 @@
-const products = [
+﻿const products = [
   {
     id: "golden-dragonfly",
     name: "Golden Dragonfly",
@@ -128,88 +128,35 @@ const extraProducts = [
 ];
 
 const seedProducts = [
-  {
-    id: "carrot-seeds",
-    name: "Carrot Seeds",
-    rarity: "common",
-    role: "Seed",
-    type: "seed",
-    price: 2,
-    image: "assets/seeds/carrot.svg",
-    description: "Starter seed pack for fast early garden growth."
-  },
-  {
-    id: "strawberry-seeds",
-    name: "Strawberry Seeds",
-    rarity: "rare",
-    role: "Seed",
-    type: "seed",
-    price: 4,
-    image: "assets/seeds/strawberry.svg",
-    description: "Sweet berry seed pack for better starter profits."
-  },
-  {
-    id: "blueberry-seeds",
-    name: "Blueberry Seeds",
-    rarity: "rare",
-    role: "Seed",
-    type: "seed",
-    price: 4,
-    image: "assets/seeds/blueberry.svg",
-    description: "Reliable berry seeds for steady garden cash."
-  },
-  {
-    id: "tomato-seeds",
-    name: "Tomato Seeds",
-    rarity: "rare",
-    role: "Seed",
-    type: "seed",
-    price: 5,
-    image: "assets/seeds/tomato.svg",
-    description: "Classic crop seed pack for quick harvest loops."
-  },
-  {
-    id: "pumpkin-seeds",
-    name: "Pumpkin Seeds",
-    rarity: "legendary",
-    role: "Seed",
-    type: "seed",
-    price: 9,
-    image: "assets/seeds/pumpkin.svg",
-    description: "Big crop seed pack for higher-value farms."
-  },
-  {
-    id: "watermelon-seeds",
-    name: "Watermelon Seeds",
-    rarity: "legendary",
-    role: "Seed",
-    type: "seed",
-    price: 10,
-    image: "assets/seeds/watermelon.svg",
-    description: "Premium fruit seeds for stronger crop sales."
-  },
-  {
-    id: "sunflower-seeds",
-    name: "Sunflower Seeds",
-    rarity: "mythic",
-    role: "Seed",
-    type: "seed",
-    price: 15,
-    image: "assets/seeds/sunflower.svg",
-    description: "Bright mythic seed pack for flex gardens."
-  },
-  {
-    id: "dragon-fruit-seeds",
-    name: "Dragon Fruit Seeds",
-    rarity: "super",
-    role: "Seed",
-    type: "seed",
-    price: 20,
-    image: "assets/seeds/dragon-fruit.svg",
-    description: "Rare exotic seed pack for late-game profits."
-  }
+  { id: "carrot-seeds", name: "Carrot Seeds", rarity: "common", role: "Seed", type: "seed", price: 2, image: "assets/seeds/carrot.svg", description: "Common seed from the Seed Shop." },
+  { id: "strawberry-seeds", name: "Strawberry Seeds", rarity: "common", role: "Seed", type: "seed", price: 2, image: "assets/seeds/strawberry.svg", description: "Common berry seed from the Seed Shop." },
+  { id: "blueberry-seeds", name: "Blueberry Seeds", rarity: "common", role: "Seed", type: "seed", price: 2, image: "assets/seeds/blueberry.svg", description: "Common berry seed from the Seed Shop." },
+  { id: "tulip-seeds", name: "Tulip Seeds", rarity: "uncommon", role: "Seed", type: "seed", price: 3, image: "assets/seeds/tulip.svg", description: "Uncommon flower seed from the Seed Shop." },
+  { id: "tomato-seeds", name: "Tomato Seeds", rarity: "uncommon", role: "Seed", type: "seed", price: 3, image: "assets/seeds/tomato.svg", description: "Uncommon crop seed from the Seed Shop." },
+  { id: "apple-seeds", name: "Apple Seeds", rarity: "uncommon", role: "Seed", type: "seed", price: 3, image: "assets/seeds/apple.svg", description: "Uncommon fruit seed from the Seed Shop." },
+  { id: "bamboo-seeds", name: "Bamboo Seeds", rarity: "rare", role: "Seed", type: "seed", price: 5, image: "assets/seeds/bamboo.svg", description: "Rare crop seed from the Seed Shop." },
+  { id: "corn-seeds", name: "Corn Seeds", rarity: "rare", role: "Seed", type: "seed", price: 5, image: "assets/seeds/corn.svg", description: "Rare crop seed from the Seed Shop." },
+  { id: "cactus-seeds", name: "Cactus Seeds", rarity: "rare", role: "Seed", type: "seed", price: 5, image: "assets/seeds/cactus.svg", description: "Rare defensive crop seed from the Seed Shop." },
+  { id: "pineapple-seeds", name: "Pineapple Seeds", rarity: "rare", role: "Seed", type: "seed", price: 6, image: "assets/seeds/pineapple.svg", description: "Rare fruit seed from the Seed Shop." },
+  { id: "mushroom-seeds", name: "Mushroom Seeds", rarity: "epic", role: "Seed", type: "seed", price: 8, image: "assets/seeds/mushroom.svg", description: "Epic seed from the Seed Shop." },
+  { id: "green-bean-seeds", name: "Green Bean Seeds", rarity: "epic", role: "Seed", type: "seed", price: 8, image: "assets/seeds/green-bean.svg", description: "Epic crop seed from the Seed Shop." },
+  { id: "banana-seeds", name: "Banana Seeds", rarity: "epic", role: "Seed", type: "seed", price: 9, image: "assets/seeds/banana.svg", description: "Epic fruit seed from the Seed Shop." },
+  { id: "grape-seeds", name: "Grape Seeds", rarity: "epic", role: "Seed", type: "seed", price: 9, image: "assets/seeds/grape.svg", description: "Epic vine seed from the Seed Shop." },
+  { id: "coconut-seeds", name: "Coconut Seeds", rarity: "epic", role: "Seed", type: "seed", price: 10, image: "assets/seeds/coconut.svg", description: "Epic tropical seed from the Seed Shop." },
+  { id: "mango-seeds", name: "Mango Seeds", rarity: "epic", role: "Seed", type: "seed", price: 10, image: "assets/seeds/mango.svg", description: "Epic fruit seed from the Seed Shop." },
+  { id: "dragon-fruit-seeds", name: "Dragon Fruit Seeds", rarity: "legendary", role: "Seed", type: "seed", price: 14, image: "assets/seeds/dragon-fruit.svg", description: "Legendary exotic seed from the Seed Shop." },
+  { id: "acorn-seeds", name: "Acorn Seeds", rarity: "legendary", role: "Seed", type: "seed", price: 15, image: "assets/seeds/acorn.svg", description: "Legendary tree seed from the Seed Shop." },
+  { id: "cherry-seeds", name: "Cherry Seeds", rarity: "legendary", role: "Seed", type: "seed", price: 16, image: "assets/seeds/cherry.svg", description: "Legendary fruit seed from the Seed Shop." },
+  { id: "sunflower-seeds", name: "Sunflower Seeds", rarity: "legendary", role: "Seed", type: "seed", price: 17, image: "assets/seeds/sunflower.svg", description: "Legendary flower seed from the Seed Shop." },
+  { id: "venus-fly-trap-seeds", name: "Venus Fly Trap Seeds", rarity: "mythic", role: "Seed", type: "seed", price: 22, image: "assets/seeds/venus-fly-trap.svg", description: "Mythic defensive plant seed from the Seed Shop." },
+  { id: "pomegranate-seeds", name: "Pomegranate Seeds", rarity: "mythic", role: "Seed", type: "seed", price: 23, image: "assets/seeds/pomegranate.svg", description: "Mythic fruit seed from the Seed Shop." },
+  { id: "poison-apple-seeds", name: "Poison Apple Seeds", rarity: "mythic", role: "Seed", type: "seed", price: 24, image: "assets/seeds/poison-apple.svg", description: "Mythic dangerous fruit seed from the Seed Shop." },
+  { id: "venom-spitter-seeds", name: "Venom Spitter Seeds", rarity: "mythic", role: "Seed", type: "seed", price: 25, image: "assets/seeds/venom-spitter.svg", description: "Mythic defensive seed from the Seed Shop." },
+  { id: "briar-rose-seeds", name: "Briar Rose Seeds", rarity: "mythic", role: "Seed", type: "seed", price: 26, image: "assets/seeds/briar-rose.svg", description: "Mythic thorny flower seed from the Seed Shop." },
+  { id: "moon-bloom-seeds", name: "Moon Bloom Seeds", rarity: "super", role: "Seed", type: "seed", price: 32, image: "assets/seeds/moon-bloom.svg", description: "Super flower seed from the Seed Shop." },
+  { id: "hypno-bloom-seeds", name: "Hypno Bloom Seeds", rarity: "super", role: "Seed", type: "seed", price: 35, image: "assets/seeds/hypno-bloom.svg", description: "Super hypnotic flower seed from the Seed Shop." },
+  { id: "dragons-breath-seeds", name: "Dragon's Breath Seeds", rarity: "super", role: "Seed", type: "seed", price: 40, image: "assets/seeds/dragons-breath.svg", description: "Super late-game seed from the Seed Shop." }
 ];
-
 const petProducts = [...products, ...extraProducts];
 const catalog = [...petProducts, ...seedProducts];
 const cart = [];
@@ -1060,7 +1007,7 @@ function renderPriceEditor() {
     <label class="price-row" for="price-${product.id}">
       <span>
         <strong>${product.name}</strong>
-        <small>${product.rarity} · ${product.role}</small>
+        <small>${product.rarity} Â· ${product.role}</small>
       </span>
       <input id="price-${product.id}" data-price-id="${product.id}" type="number" min="0" step="1" value="${product.price}" />
     </label>
@@ -1264,3 +1211,4 @@ refreshCustomerStatus();
 checkPendingOrderStatus();
 setInterval(checkPendingOrderStatus, 10000);
 setInterval(refreshCustomerStatus, 12000);
+
