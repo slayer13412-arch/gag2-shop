@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GAG2 Garden Market</title>
+    <script src="config.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="GAG2 Garden Market home">
+        <span class="brand-mark">G2</span>
+        <span>Garden Market</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#pets">Pets</a>
+        <a href="#bundles">Bundles</a>
+        <a href="#checkout">Pay</a>
+        <a href="#orders">Orders</a>
+      </nav>
+      <div class="header-actions">
+        <button class="login-pill" type="button" data-open-login>Login</button>
+        <button class="cart-pill" type="button" data-open-cart>
+          Cart <span id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="sent-banner" id="sentBanner" hidden>
+      Your order has beeen sent
+    </div>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Grow a Garden 2 items</p>
+          <h1>gag2 shop fast deliveerys!</h1>
+          <p>
+            Pick your items, send payment with Cash App or crypto, then drop your Roblox username and proof of payment.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#pets">Shop Pets</a>
+            <a class="button ghost" href="#checkout">Payment Info</a>
+          </div>
+        </div>
+        <div class="hero-stage" aria-label="Featured pets">
+          <img src="assets/pets/golden-dragonfly.webp" alt="Golden Dragonfly pet" />
+          <img src="assets/pets/raccoon.webp" alt="Raccoon pet" />
+          <img src="assets/pets/unicorn.webp" alt="Unicorn pet" />
+        </div>
+      </section>
+
+      <section class="notice">
+        <strong>Important:</strong> this is an unofficial fan shop template. Orders saved on this static version are
+        stored in the browser that confirms the payment.
+      </section>
+
+      <section class="section-heading" id="pets">
+        <p class="eyebrow">Pet inventory</p>
+        <h2>Featured GAG2 pets</h2>
+      </section>
+
+      <section class="filters" aria-label="Product filters">
+        <button class="filter active" type="button" data-filter="all">All</button>
+        <button class="filter" type="button" data-filter="common">Common</button>
+        <button class="filter" type="button" data-filter="rare">Rare</button>
+        <button class="filter" type="button" data-filter="legendary">Legendary</button>
+        <button class="filter" type="button" data-filter="mythic">Mythic</button>
+        <button class="filter" type="button" data-filter="super">Super</button>
+      </section>
+
+      <section class="product-grid" id="productGrid" aria-live="polite"></section>
+
+      <section class="section-heading" id="bundles">
+        <p class="eyebrow">Bundles</p>
+        <h2>Quick packs</h2>
+      </section>
+
+      <section class="bundle-grid">
+        <article class="bundle">
+          <div>
+            <span class="tag">Starter</span>
+            <h3>Speed Farm Pack</h3>
+            <p>Bunny, Frog, and Deer for movement and garden growth boosts.</p>
+          </div>
+          <button class="button small" type="button" data-bundle="starter">Add $8 pack</button>
+        </article>
+        <article class="bundle premium">
+          <div>
+            <span class="tag">Popular</span>
+            <h3>Mutation Pack</h3>
+            <p>Golden Dragonfly, Unicorn, and Bee for higher-value farming.</p>
+          </div>
+          <button class="button small" type="button" data-bundle="mutation">Add $28 pack</button>
+        </article>
+        <article class="bundle">
+          <div>
+            <span class="tag">Rare</span>
+            <h3>Defense Pack</h3>
+            <p>Black Dragon and Ice Serpent for garden protection builds.</p>
+          </div>
+          <button class="button small" type="button" data-bundle="defense">Add $35 pack</button>
+        </article>
+      </section>
+
+      <section class="checkout" id="checkout">
+        <div>
+          <p class="eyebrow">Checkout</p>
+          <h2>Cash App and crypto accepted</h2>
+          <p>
+            This static page builds an order summary. Customers can log in with the same email they used at checkout
+            to see when an order is accepted and sent.
+          </p>
+          <div class="checkout-badges" aria-label="Checkout highlights">
+            <span>Fast delivery</span>
+            <span>Status updates</span>
+          </div>
+        </div>
+        <div class="payment-grid">
+          <article class="payment-card">
+            <div class="payment-icon cash">$</div>
+            <div class="payment-copy">
+              <h3>Cash App</h3>
+              <p class="pay-line">$slayerssshop</p>
+              <p>Note: Roblox username or checkout email</p>
+            </div>
+            <button class="button copy" type="button" data-copy="$slayerssshop">Copy tag</button>
+          </article>
+          <article class="payment-card">
+            <div class="payment-icon">SOL</div>
+            <div class="payment-copy">
+              <h3>Solana</h3>
+              <p class="pay-line">SOL wallet</p>
+              <p class="wallet-text">FTf88BqGSu9vM9DqxRmdsvLfEmKEamq4N3A4p2J5XL6D</p>
+            </div>
+            <button class="button copy" type="button" data-copy="FTf88BqGSu9vM9DqxRmdsvLfEmKEamq4N3A4p2J5XL6D">Copy SOL</button>
+          </article>
+          <article class="payment-card">
+            <div class="payment-icon">LTC</div>
+            <div class="payment-copy">
+              <h3>Litecoin</h3>
+              <p class="pay-line">LTC wallet</p>
+              <p class="wallet-text">Ld1s3cYBWR7azLdWdB45Mb6tknDqZDiXY1</p>
+            </div>
+            <button class="button copy" type="button" data-copy="Ld1s3cYBWR7azLdWdB45Mb6tknDqZDiXY1">Copy LTC</button>
+          </article>
+          <article class="payment-card">
+            <div class="payment-icon">ETH</div>
+            <div class="payment-copy">
+              <h3>Ethereum</h3>
+              <p class="pay-line">ETH wallet</p>
+              <p class="wallet-text">0x316ab82838dC4ACf3017baa43406391EbAbD9009</p>
+            </div>
+            <button class="button copy" type="button" data-copy="0x316ab82838dC4ACf3017baa43406391EbAbD9009">Copy ETH</button>
+          </article>
+          <article class="payment-card">
+            <div class="payment-icon discord">DC</div>
+            <div class="payment-copy">
+              <h3>Delivery contact</h3>
+              <p class="pay-line">Discord: yourname</p>
+              <p>Manual delivery after confirmation.</p>
+            </div>
+            <button class="button copy" type="button" data-copy="yourname">Copy Discord</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="orders-admin" id="orders">
+        <div class="section-heading">
+          <p class="eyebrow">Admin</p>
+          <h2>Orders</h2>
+        </div>
+        <div class="admin-lock" id="adminLock">
+          <label for="adminPassword">Orders password</label>
+          <div class="admin-login-row">
+            <input id="adminPassword" type="password" placeholder="Enter password" autocomplete="current-password" />
+            <button class="button primary" type="button" id="unlockOrders">Unlock</button>
+          </div>
+          <p class="mini" id="adminMessage">Only people with the password can view saved orders on this browser.</p>
+        </div>
+        <div class="orders-panel" id="ordersPanel" hidden>
+          <div class="orders-actions">
+            <button class="button ghost" type="button" id="exportOrders">Export orders</button>
+            <button class="button ghost danger" type="button" id="clearOrders">Clear orders</button>
+          </div>
+          <div class="orders-list" id="ordersList"></div>
+          <div class="login-admin">
+            <div class="section-heading compact">
+              <p class="eyebrow">Admin</p>
+              <h2>Customer logins</h2>
+            </div>
+            <div class="orders-actions">
+              <button class="button ghost" type="button" id="refreshLogins">Refresh logins</button>
+              <button class="button ghost danger" type="button" id="clearLogins">Clear logins</button>
+            </div>
+            <div class="login-list" id="loginList"></div>
+          </div>
+          <div class="price-admin">
+            <div class="section-heading compact">
+              <p class="eyebrow">Admin</p>
+              <h2>Pet prices</h2>
+            </div>
+            <div class="price-list" id="priceList"></div>
+            <button class="button primary" type="button" id="savePrices">Save prices</button>
+            <p class="mini" id="priceMessage">Change prices here, then save.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart" aria-hidden="true">
+      <div class="cart-header">
+        <h2>Your cart</h2>
+        <button class="icon-button" type="button" data-close-cart aria-label="Close cart">x</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-empty" id="cartEmpty">Your cart is empty.</div>
+      <div class="cart-footer">
+        <div class="total-row">
+          <span>Total</span>
+          <strong id="cartTotal">$0</strong>
+        </div>
+        <label for="username">Roblox username</label>
+        <input id="username" type="text" placeholder="Enter username" autocomplete="off" />
+        <label for="orderEmail">Email for status updates</label>
+        <input id="orderEmail" type="email" placeholder="you@example.com" autocomplete="email" />
+        <label for="payMethod">Payment method</label>
+        <select id="payMethod">
+          <option value="cashapp">Cash App</option>
+          <option value="sol">SOL</option>
+          <option value="ltc">LTC</option>
+          <option value="eth">ETH</option>
+        </select>
+        <div class="payment-selected" id="selectedPaymentBox">
+          <span id="selectedPaymentLabel">Cash App</span>
+          <strong id="selectedPaymentValue">$slayerssshop</strong>
+          <button class="button copy" type="button" id="copySelectedPayment">Copy payment info</button>
+        </div>
+        <button class="button primary full" type="button" id="copyOrder">Copy order message</button>
+        <button class="button full confirm" type="button" id="confirmPayment">Confirm payment</button>
+        <p class="mini" id="confirmMessage">Confirm payment after sending it. This creates an order on the site.</p>
+      </div>
+    </aside>
+    <aside class="login-panel" id="loginPanel" aria-label="Customer login" aria-hidden="true">
+      <div class="cart-header">
+        <h2>Login</h2>
+        <button class="icon-button" type="button" data-close-login aria-label="Close login">x</button>
+      </div>
+      <p class="mini">Check your order status with your email or Roblox username. Google sign-in needs a Google Client ID before it can go live.</p>
+      <div class="login-card">
+        <label for="customerEmail">Email</label>
+        <input id="customerEmail" type="email" placeholder="you@example.com" autocomplete="email" />
+        <label for="customerRobloxUsername">Roblox username</label>
+        <input id="customerRobloxUsername" type="text" placeholder="Roblox username" autocomplete="username" />
+        <button class="button primary full" type="button" id="customerLogin">Login / check orders</button>
+        <div class="google-button-slot" id="googleButton"></div>
+        <button class="button ghost full" type="button" id="googleLogin">Continue with Google</button>
+        <p class="mini warning">Never enter a Roblox password or cookie on fan shops. This login only uses email or username.</p>
+        <p class="mini" id="customerLoginMessage">Use the same email or Roblox username entered at checkout.</p>
+      </div>
+      <div class="customer-status" id="customerStatus"></div>
+    </aside>
+    <div class="overlay" id="overlay" data-close-cart data-close-login></div>
+
+    <section class="chat-widget" id="chatWidget" aria-label="Shop chat">
+      <button class="chat-launcher" type="button" id="chatToggle">Chat</button>
+      <div class="chat-panel" id="chatPanel" hidden>
+        <div class="chat-head">
+          <div>
+            <strong>GAG2 Shop Bot</strong>
+            <span>AI helper</span>
+          </div>
+          <button class="icon-button" type="button" id="chatClose" aria-label="Close chat">x</button>
+        </div>
+        <div class="chat-log" id="chatLog"></div>
+        <form class="chat-form" id="chatForm">
+          <input id="chatInput" type="text" placeholder="Ask about orders, payment, delivery..." autocomplete="off" />
+          <button class="button primary" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Unofficial shop template. Not affiliated with Roblox, Do Big Games, or Grow a Garden 2.
+        Pet images are local copies sourced from the public GAG2 wiki for layout mockup use.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
