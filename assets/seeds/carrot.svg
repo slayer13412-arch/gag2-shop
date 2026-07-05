@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Carrot seed pack">
+  <rect x="28" y="22" width="104" height="124" rx="14" fill="#fff7d6" stroke="#17321e" stroke-width="5"/>
+  <rect x="28" y="22" width="104" height="38" rx="14" fill="#ffb84f"/>
+  <text x="80" y="47" font-family="Arial,sans-serif" font-size="18" font-weight="800" text-anchor="middle" fill="#17321e">CARROT</text>
+  <path d="M81 80c15 17 9 44-4 55-14-12-19-38-3-55 2-2 5-2 7 0Z" fill="#f47b26"/>
+  <path d="M77 78c-2-15 5-24 18-27-2 14-8 23-18 27Z" fill="#42a85f"/>
+  <path d="M80 78c3-14-2-25-14-31 0 15 4 25 14 31Z" fill="#4fbd6f"/>
+  <circle cx="52" cy="95" r="5" fill="#8b5a2b"/>
+  <circle cx="112" cy="105" r="5" fill="#8b5a2b"/>
+</svg>

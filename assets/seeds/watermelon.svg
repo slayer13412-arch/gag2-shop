@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Watermelon seed pack">
+  <rect x="28" y="22" width="104" height="124" rx="14" fill="#edfff0" stroke="#17321e" stroke-width="5"/>
+  <rect x="28" y="22" width="104" height="38" rx="14" fill="#69d47c"/>
+  <text x="80" y="47" font-family="Arial,sans-serif" font-size="14" font-weight="800" text-anchor="middle" fill="#17321e">WATERMELON</text>
+  <path d="M46 110c13-37 55-51 83-22-17 36-61 45-83 22Z" fill="#2b9b57"/>
+  <path d="M55 106c13-25 44-34 65-15-15 25-45 32-65 15Z" fill="#ff5d70"/>
+  <g fill="#17321e"><ellipse cx="75" cy="101" rx="3" ry="5"/><ellipse cx="91" cy="96" rx="3" ry="5"/><ellipse cx="105" cy="101" rx="3" ry="5"/></g>
+</svg>

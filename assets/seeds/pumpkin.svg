@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Pumpkin seed pack">
+  <rect x="28" y="22" width="104" height="124" rx="14" fill="#fff5df" stroke="#17321e" stroke-width="5"/>
+  <rect x="28" y="22" width="104" height="38" rx="14" fill="#ff9a38"/>
+  <text x="80" y="47" font-family="Arial,sans-serif" font-size="17" font-weight="800" text-anchor="middle" fill="#17321e">PUMPKIN</text>
+  <ellipse cx="80" cy="106" rx="39" ry="30" fill="#f58924"/>
+  <ellipse cx="80" cy="106" rx="18" ry="30" fill="#ff9d31"/>
+  <path d="M80 78c-1-12 5-19 16-21" fill="none" stroke="#2d8d4e" stroke-width="7" stroke-linecap="round"/>
+  <path d="M52 105h56" stroke="#c76314" stroke-width="4" stroke-linecap="round" opacity=".45"/>
+</svg>

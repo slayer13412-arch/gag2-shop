@@ -127,7 +127,91 @@ const extraProducts = [
   }
 ];
 
-const catalog = [...products, ...extraProducts];
+const seedProducts = [
+  {
+    id: "carrot-seeds",
+    name: "Carrot Seeds",
+    rarity: "common",
+    role: "Seed",
+    type: "seed",
+    price: 2,
+    image: "assets/seeds/carrot.svg",
+    description: "Starter seed pack for fast early garden growth."
+  },
+  {
+    id: "strawberry-seeds",
+    name: "Strawberry Seeds",
+    rarity: "rare",
+    role: "Seed",
+    type: "seed",
+    price: 4,
+    image: "assets/seeds/strawberry.svg",
+    description: "Sweet berry seed pack for better starter profits."
+  },
+  {
+    id: "blueberry-seeds",
+    name: "Blueberry Seeds",
+    rarity: "rare",
+    role: "Seed",
+    type: "seed",
+    price: 4,
+    image: "assets/seeds/blueberry.svg",
+    description: "Reliable berry seeds for steady garden cash."
+  },
+  {
+    id: "tomato-seeds",
+    name: "Tomato Seeds",
+    rarity: "rare",
+    role: "Seed",
+    type: "seed",
+    price: 5,
+    image: "assets/seeds/tomato.svg",
+    description: "Classic crop seed pack for quick harvest loops."
+  },
+  {
+    id: "pumpkin-seeds",
+    name: "Pumpkin Seeds",
+    rarity: "legendary",
+    role: "Seed",
+    type: "seed",
+    price: 9,
+    image: "assets/seeds/pumpkin.svg",
+    description: "Big crop seed pack for higher-value farms."
+  },
+  {
+    id: "watermelon-seeds",
+    name: "Watermelon Seeds",
+    rarity: "legendary",
+    role: "Seed",
+    type: "seed",
+    price: 10,
+    image: "assets/seeds/watermelon.svg",
+    description: "Premium fruit seeds for stronger crop sales."
+  },
+  {
+    id: "sunflower-seeds",
+    name: "Sunflower Seeds",
+    rarity: "mythic",
+    role: "Seed",
+    type: "seed",
+    price: 15,
+    image: "assets/seeds/sunflower.svg",
+    description: "Bright mythic seed pack for flex gardens."
+  },
+  {
+    id: "dragon-fruit-seeds",
+    name: "Dragon Fruit Seeds",
+    rarity: "super",
+    role: "Seed",
+    type: "seed",
+    price: 20,
+    image: "assets/seeds/dragon-fruit.svg",
+    description: "Rare exotic seed pack for late-game profits."
+  }
+];
+
+const petProducts = [...products, ...extraProducts];
+const catalog = [...petProducts, ...seedProducts];
 const cart = [];
 const orderStorageKey = "gag2Orders";
 const priceStorageKey = "gag2Prices";
@@ -193,11 +277,17 @@ function money(value) {
 }
 
 function renderProducts(filter = "all") {
-  const visible = filter === "all" ? products : products.filter((product) => product.rarity === filter);
+  const visible = filter === "all"
+    ? catalog
+    : filter === "pets"
+      ? petProducts
+      : filter === "seeds"
+        ? seedProducts
+        : catalog.filter((product) => product.rarity === filter);
   grid.innerHTML = visible.map((product) => `
-    <article class="product-card" data-rarity="${product.rarity}">
+    <article class="product-card" data-rarity="${product.rarity}" data-type="${product.type || "pet"}">
       <div class="product-art">
-        <img src="${product.image}" alt="${product.name} pet" loading="lazy" />
+        <img src="${product.image}" alt="${product.name}" loading="lazy" />
       </div>
       <div class="product-body">
         <div class="meta-row">

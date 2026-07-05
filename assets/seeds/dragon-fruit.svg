@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Dragon Fruit seed pack">
+  <rect x="28" y="22" width="104" height="124" rx="14" fill="#fff0fb" stroke="#17321e" stroke-width="5"/>
+  <rect x="28" y="22" width="104" height="38" rx="14" fill="#f05bc7"/>
+  <text x="80" y="47" font-family="Arial,sans-serif" font-size="13" font-weight="800" text-anchor="middle" fill="#17321e">DRAGON FRUIT</text>
+  <path d="M80 70c22 11 35 27 30 48-7 21-30 20-30 20s-23 1-30-20c-5-21 8-37 30-48Z" fill="#e737a9"/>
+  <path d="M61 90l-18-7 14 18M99 90l18-7-14 18M68 124l-13 16 22-7M92 124l13 16-22-7" fill="none" stroke="#64c66d" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="80" cy="107" rx="18" ry="22" fill="#fff"/>
+  <g fill="#17321e"><circle cx="73" cy="101" r="2"/><circle cx="85" cy="98" r="2"/><circle cx="81" cy="113" r="2"/><circle cx="90" cy="109" r="2"/></g>
+</svg>

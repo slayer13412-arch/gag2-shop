@@ -11,5 +11,13 @@
   "turtle": 2,
   "frog": 2,
   "bunny": 2,
-  "deer": 2
+  "deer": 2,
+  "carrot-seeds": 2,
+  "strawberry-seeds": 4,
+  "blueberry-seeds": 4,
+  "tomato-seeds": 5,
+  "pumpkin-seeds": 9,
+  "watermelon-seeds": 10,
+  "sunflower-seeds": 15,
+  "dragon-fruit-seeds": 20
 }
